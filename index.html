@@ -9,7 +9,7 @@
   <!-- Title & Description -->
   <title>Modern Web Development - Robert Parker</title>
   <meta name="description" content="Expert web development services delivering modern, creative solutions with visually engaging designs, seamless user experiences, and tailored innovation.">
-  <meta name="keywords" content="Web Development, Modern, Creative">
+  <meta name="keywords" content="Web Development, Modern, Customized">
   <meta name="author" content="Robert Parker">
   <meta name="robots" content="index, follow">
 
@@ -29,6 +29,9 @@
 
   <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#ffffff">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/72ff984271.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Your content here -->
@@ -38,17 +41,46 @@
 
     <nav>
       <ul>
-        <li>Web Development</li>
-        <li>Who I Am</li>
-        <li>Contact Me</li>        
+        <a href="#web-development">
+          <li>Web Development <i class="fa-sharp fa-chevron-right"></i></li>
+        </a>
+
+        <a href="">
+          <li>Who I Am <i class="fa-sharp fa-chevron-right"></i></li>
+        </a>
+
+        <a href="">
+          <li>Contact Me <i class="fa-sharp fa-chevron-right"></i></li>  
+        </a>      
       </ul>
     </nav>
+    <a href="" class="contact-link" title="Email Me" aria-label="Email Me"><i class="fa-sharp fa-envelope fa-2xl"></i></a>
+    <a href="" class="contact-link" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+    <a href="" class="contact-link" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+
+    <div class="one"></div>
+    <div class="two"></div>
   </header>
+
+  <main>
+    <section id="web-development">
+      <div class="col-6 p-2">
+        <h2>Web Development</h2>
+        <h3>Modern, responsive, and customized.</h3>
+        <p>
+          Offering modern, customized web development services to elevate your online presence. Expert in crafting visually engaging, responsive websites that deliver seamless user experiences. I specialize in clean designs, innovative solutions, and performance-driven development to help your business stand out in the digital landscape.
+        </p>
+      </div>
+
+      <div class="col-6 p-2">
+        <img src="/images/web-development.png" alt="Web Development">
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Your Company Name</p>
+    <p>&copy; 2025 Robert Parker</p>
   </footer>
 
-  <!-- Optional JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
