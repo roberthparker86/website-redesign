@@ -1,3 +1,11 @@
+:root {
+    --primary-cyan: #63dfe3;
+    --secondary-blue: #377495;
+    --black: #00171f;
+    --primary-orange: #fef6ec;
+    --secondary-orange: #fde9c4;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -6,14 +14,20 @@ html, body {
     padding: 0;
 }
 body {
+    background-color: var(--black);
+    color: var(--primary-orange);
     font-family: "Sansation", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1rem;
 }
+
 a {
     text-decoration: none;
     color: inherit;
+}
+a:hover {
+    color: var(--secondary-blue);
 }
 
 header {
@@ -23,22 +37,34 @@ header {
 }
 
 header div {
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 60%);
+    background: radial-gradient(circle, rgba(99, 223, 227, 1) 40%, rgba(99, 223, 227, 0) 60%);
     position: absolute;
     z-index: 1;
 }
 
 .one {
-    bottom: -40rem;
-    right: -15rem;
-    width: 70rem;
-    height: 70rem;
+    bottom: -50rem;
+    right: -10rem;
+    width: 80rem;
+    height: 80rem;
 }
 .two {
-    bottom: -10rem;
+    bottom: -8rem;
     right: -25rem;
     width: 55rem;
     height: 55rem;
+}
+.three {
+    bottom: -10rem;
+    right: -8rem;
+    width: 60rem;
+    height: 60rem;
+}
+.four {
+    bottom: -23rem;
+    right: -23rem;
+    width: 46rem;
+    height: 46rem;
 }
 
 section, header {
@@ -47,6 +73,7 @@ section, header {
 }
 
 h1 {
+    color: var(--primary-cyan);
     font-size: 4rem;
     margin: 0;
     margin-bottom: 3rem;
@@ -79,35 +106,38 @@ nav li {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-right: 2rem;
-    margin-bottom:  1rem;
+
     padding: 1rem;
     width:  16rem
 }
+nav a {
+    margin-right: 2rem;
+    margin-bottom:  1.5rem;
+}
 nav li:hover {
-    opacity: 0.7;
+    border-color: var(--primary-cyan);
+    color: var(--primary-cyan);
 }
-
 .contact-link {
-    margin-right: 1rem;
-}
-.contact-link:hover {
-    opacity: .7;
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 1.5rem;
 }
 
 section {
     padding: 3rem 6rem;
 }
 section#web-development {
-    background-color: black;
-    color: white;
+    background-color: var(--primary-cyan);
+    color: var(--black);
     display: flex;
 }
-section#web-development img {
+section#web-development img,
+section#who-i-am img {
     width: 100%;
 }
 
-.col-6 {
+.col-lg-6 {
     width: 50%;
 }
 
@@ -117,4 +147,51 @@ section#web-development img {
 
 footer {
     padding: 3rem;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 992px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    h3 {
+        font-size: 1.25rem;
+    }
+    p {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .name-text {
+        font-size: 1.5rem;
+    }
+
+    header,
+    section {
+        padding: 1rem;
+    }
+    header div {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        width: 100%;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+    }
+
+    section#web-development {
+        flex-direction: column;
+    }
 }
