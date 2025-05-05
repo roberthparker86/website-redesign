@@ -47,18 +47,45 @@ header div {
     right: -10rem;
     width: 80rem;
     height: 80rem;
+    animation: one-animation 2s ease-in-out .5s infinite alternate;
+}
+@keyframes one-animation {
+  from {
+    transform: tanslate(0, 0);
+  }
+  to {
+    transform: translate(-5rem, -.5rem);
+  }
 }
 .two {
     bottom: -8rem;
     right: -25rem;
     width: 55rem;
     height: 55rem;
+    animation: two-animation 2s ease-in-out 1s infinite alternate;
+}
+@keyframes two-animation {
+  from {
+    transform: tanslate(0, 0);
+  }
+  to {
+    transform: translate(-.5rem, -6rem);
+  }
 }
 .three {
     bottom: -10rem;
     right: -8rem;
     width: 60rem;
     height: 60rem;
+    animation: three-animation 3s ease-in-out infinite alternate;
+}
+@keyframes three-animation {
+  from {
+    transform: tanslate(0, 0);
+  }
+  to {
+    transform: translate(-6rem, -6rem);
+  }
 }
 .four {
     bottom: -23rem;
@@ -68,7 +95,7 @@ header div {
 }
 
 section, header {
-    height:  100vh;
+    min-height:  100vh;
     width: 100%;
 }
 
@@ -120,21 +147,56 @@ nav li:hover {
 }
 .contact-link {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-right: 1.5rem;
 }
 
 section {
     padding: 3rem 6rem;
+    display: flex;
 }
-section#web-development {
+section#web-development,
+section#contact-me {
     background-color: var(--primary-cyan);
     color: var(--black);
-    display: flex;
+}
+section#who-i-am {
+  flex-direction: row-reverse;
 }
 section#web-development img,
 section#who-i-am img {
-    width: 100%;
+  width: 100%;
+}
+
+section .section-cta {
+  border: 1px solid var(--black);
+  color: var(--black);
+  display: inline-block;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  padding: .5rem 1rem;
+  width: 16rem;
+}
+section#who-i-am .section-cta  {
+  border-color: var(--primary-cyan);
+  color: var(--primary-cyan);
+}
+section .section-cta div {
+  display: flex;
+  justify-content: space-between;
+}
+section .section-cta:hover {
+  border: 1px solid var(--secondary-blue);
+  color: var(--secondary-blue);
+}
+
+#web-development ul,
+#who-i-am ul {
+  padding-left: 1rem;
+}
+
+section#contact-me {
+  flex-direction: column;
 }
 
 .col-lg-6 {
@@ -143,6 +205,10 @@ section#who-i-am img {
 
 .p-2 {
     padding: 1rem;
+}
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 footer {
@@ -191,7 +257,20 @@ footer {
         width: 100%;
     }
 
-    section#web-development {
+    section#web-development,
+    section#who-i-am {
         flex-direction: column;
+    }
+
+    section#web-development img,
+    section#who-i-am img {
+      margin-top: 1rem;
+    }
+
+    section .section-cta {
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding: .5rem 1rem;
+      width: 100%;
     }
 }
