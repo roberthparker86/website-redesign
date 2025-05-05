@@ -165,7 +165,10 @@ section#who-i-am {
 }
 section#web-development img,
 section#who-i-am img {
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
 section .section-cta {
