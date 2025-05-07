@@ -158,10 +158,9 @@ section {
     padding: 3rem 6rem;
     display: flex;
 }
-section#web-development,
-section#contact-me {
-    background-color: var(--primary-cyan);
-    color: var(--black);
+section#web-development {
+    background: no-repeat url(/images/web-development-upscale.webp) center;
+    background-size: cover;
 }
 section#who-i-am {
   flex-direction: row-reverse;
@@ -174,16 +173,44 @@ section#who-i-am img {
   width: 75%;
 }
 
+.blurb-container {
+    border: 1px solid var(--primary-cyan);
+    color: var(--primary-orange);
+    padding: 1.5rem 2.5rem;
+    position: relative;
+}
+.blurb-container p,
+.blurb-container ul,
+.blurb-container h2,
+.blurb-container h3,
+.blurb-container a {
+    position: relative;
+    z-index: 2;
+}
+.blurb-container > .backdrop {
+    background-color: rgba(0, 23, 31, .8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(7px); 
+    -webkit-backdrop-filter: blur(7px);
+}
+
 section .section-cta {
   border: 1px solid var(--black);
   color: var(--black);
-  display: inline-block;
+  display: block;
   font-size: 1.25rem;
   margin-top: 1.5rem;
   padding: .5rem 1rem;
   width: 16rem;
 }
-section#who-i-am .section-cta  {
+section#who-i-am .section-cta,
+section#web-development .section-cta,
+section#contact-me .section-cta  {
   border-color: var(--primary-cyan);
   color: var(--primary-cyan);
 }
@@ -202,9 +229,14 @@ section .section-cta:hover {
 }
 
 section#contact-me {
-  flex-direction: column;
+    color: var(--black);
+    flex-direction: column;
+    background: no-repeat url('/images/contact-me.webp') center;
+    background-size: cover;
+
 }
 
+/* Utility classes */
 .col-lg-6 {
     width: 50%;
 }
@@ -215,6 +247,9 @@ section#contact-me {
 .px-2 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.ms-auto {
+    margin-left: auto;
 }
 
 footer {
