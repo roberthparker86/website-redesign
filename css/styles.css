@@ -46,10 +46,10 @@ header div {
 }
 
 .one {
-    bottom: -50rem;
-    right: -10rem;
-    width: 80rem;
-    height: 80rem;
+    bottom: -15rem;
+    right: 12rem;
+    width: 35rem;
+    height: 35rem;
     animation: one-animation 2s ease-in-out .5s infinite alternate;
 }
 @keyframes one-animation {
@@ -57,15 +57,15 @@ header div {
     transform: tanslate(0, 0);
   }
   to {
-    transform: translate(-5rem, -.5rem);
+    transform: translate(-7rem, -.5rem);
   }
 }
 .two {
-    bottom: -8rem;
-    right: -25rem;
-    width: 55rem;
-    height: 55rem;
-    animation: two-animation 2s ease-in-out 1s infinite alternate;
+    bottom: 10rem;
+    right: -15rem;
+    width: 30rem;
+    height: 30rem;
+    animation: two-animation 3s ease-in-out 1s infinite alternate;
 }
 @keyframes two-animation {
   from {
@@ -76,10 +76,10 @@ header div {
   }
 }
 .three {
-    bottom: -10rem;
-    right: -8rem;
-    width: 60rem;
-    height: 60rem;
+    bottom: 5rem;
+    right: 5rem;
+    width: 35rem;
+    height: 35rem;
     animation: three-animation 3s ease-in-out infinite alternate;
 }
 @keyframes three-animation {
@@ -87,14 +87,44 @@ header div {
     transform: tanslate(0, 0);
   }
   to {
-    transform: translate(-6rem, -6rem);
+    transform: translate(-5rem, -5rem);
   }
 }
 .four {
-    bottom: -23rem;
-    right: -23rem;
-    width: 46rem;
-    height: 46rem;
+    bottom: 8rem;
+    right: -3rem;
+    width: 35rem;
+    height: 35rem;
+    animation: four-animation 3s ease-in-out infinite alternate;
+}
+@keyframes four-animation {
+  from {
+    transform: tanslate(0, 0);
+  }
+  to {  
+    transform: translate(-2rem, -5rem);
+  }
+}
+.five {
+    bottom: 2rem;
+    right: 15rem;
+    width: 30rem;
+    height: 30rem;
+    animation: five-animation 3s ease-in-out 1s infinite alternate;
+}
+@keyframes five-animation {
+  from {
+    transform: tanslate(0, 0);
+  }
+  to {  
+    transform: translate(-5rem, -2rem);
+  }
+}
+.base {
+    bottom: -60rem;
+    right: -50em;
+    width: 110rem;
+    height: 110rem;
 }
 
 section, header {
